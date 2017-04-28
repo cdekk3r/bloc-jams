@@ -63,6 +63,11 @@ html {
        color: rgb(233,50,117);
    }
 
+   .links-container .navbar-link:active {
+      color: rgb(233,50,117);
+      background-color: white;
+   }
+
  /* Medium and small screens (640px) */
  @media (min-width: 640px) {
    html { font-size: 112%; }
