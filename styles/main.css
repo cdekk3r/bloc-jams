@@ -33,6 +33,10 @@ html {
       max-width: 64rem;
   }
 
+  .container.narrow {
+    max-width: 56rem;
+}
+
   .navbar .links-container {
       display: table;
       position: absolute;
