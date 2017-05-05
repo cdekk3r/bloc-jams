@@ -88,6 +88,10 @@ var coverArt = document.getElementsByClassName('album-cover-art')[0];
 var albums = [albumPicasso, albumMarconi, albumReemus]
 var i = 0;
 coverArt.addEventListener('click', function(event) {
-      i++;
       setCurrentAlbum(albums[i]);
-})
+      if (i < (albums.length - 1) ) {
+        i++;
+      } else {
+        i = 0;
+      }
+});
