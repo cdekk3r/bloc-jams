@@ -29,6 +29,21 @@ var albumMarconi = {
     ]
 };
 
+var albumReemus = {
+    title: 'Catfish',
+    artist: 'Uncle Reemus',
+    label: 'Bum',
+    year: '2017',
+    albumArtUrl: 'assets/images/album_covers/20.png',
+    songs: [
+        { title: 'Thirty Packets of Ketchup', duration: '2:01' },
+        { title: 'Scuba Steve', duration: '3:01' },
+        { title: 'Happy Meal', duration: '3:41'},
+        { title: 'Pepperidge Farm Guy', duration: '4:14' },
+        { title: 'Kangaroo Song', duration: '3:35'}
+    ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
        '<tr class="album-view-song-item">'
@@ -67,3 +82,12 @@ var setCurrentAlbum = function(album) {
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
 };
+
+
+var coverArt = document.getElementsByClassName('album-cover-art')[0];
+var albums = [albumPicasso, albumMarconi, albumReemus]
+var i = 0;
+coverArt.addEventListener('click', function(event) {
+      i++;
+      setCurrentAlbum(albums[i]);
+})
