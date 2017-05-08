@@ -81,13 +81,16 @@ var setCurrentAlbum = function(album) {
 
 // checkpoint-13 here
 var findParentByClassName = function(element, targetClass) {
-    if (element) {
-        var currentParent = element.parentElement;
-        while (currentParent.className !== targetClass && currentParent.className !== null) {
-            currentParent = currentParent.parentElement;
-        }
-        return currentParent;
+    var currentParent = element.parentElement;
+    while (currentParent.className !== targetClass && currentParent.className !== null) {
+        currentParent = currentParent.parentElement;
     }
+    if (element.parentElement !== null) {
+      console.log("No parent found");
+    } else if (element.parentElement.className !== targetClass) {
+      console.log('No parent found with that class name');
+    }
+    return currentParent;
 };
 
 var getSongItem = function(element) {
@@ -146,9 +149,9 @@ window.onload = function() {
 
                 if (songItem.getAttribute('data-song-number') !== currentlyPlayingSong) {
                     songItem.innerHTML = playButtonTemplate;
-                }
-        }
-    });
+                  }
+              }
+      });
 
     for (var i = 0; i < songRows.length; i++) {
         songRows[i].addEventListener('mouseleave', function(event) {
@@ -159,15 +162,15 @@ window.onload = function() {
             // #2
             if (songItemNumber !== currentlyPlayingSong) {
                 songItem.innerHTML = songItemNumber;
-            }
-        });
+                  }
+              });
 
 
          songRows[i].addEventListener('click', function(event) {
              clickHandler(event.target);
-         });
-     }
-};
+                 });
+             }
+        };
 
 
 var coverArt = document.getElementsByClassName('album-cover-art')[0];
