@@ -113,12 +113,19 @@ var previousSong = function () {
         currentSongIndex = currentAlbum.songs.length - 1;
     }
 
+    var lastSongNumber = currentlyPlayingSongNumber;
+
+    currentlyPlayingSongNumber = currentSongIndex + 1;
+    currentSongFromAlbum = currentAlbum.songs[currentSongIndex];
+
     updatePlayerBarSong();
+
+    $('.main-controls .play-pause').html(playerBarPauseButton);
 
     var $previousSongNumberCell = $('.song-item-number[data-song-number="' + currentlyPlayingSongNumber + '"]');
     var $lastSongNumberCell = $('.song-item-number[data-song-number="' + lastSongNumber + '"]');
 
-    $nextSongNumberCell.html(pauseButtonTemplate);
+    $previousSongNumberCell.html(pauseButtonTemplate);
     $lastSongNumberCell.html(lastSongNumber);
 };
 
