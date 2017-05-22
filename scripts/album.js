@@ -258,7 +258,10 @@ var updatePlayerBarSong = function () {
 };
 
 var togglePlayFromPlayerBar = function () {
+  if (!currentlyPlayingSongNumber) { currentlyPlayingSongNumber = 1 }
+  var songNumberCell = getSongNumberCell(currentlyPlayingSongNumber);
   if (currentSoundFile.isPaused()) {
+
       songNumberCell.html(playButtonTemplate);
       $('.main-controls .play-pause').html(playerBarPauseButton);
       currentSoundFile.play();
@@ -290,7 +293,7 @@ $(document).ready(function() {
     setCurrentAlbum(albumPicasso);
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
-    $playPauseButton.click(togglePlayFromPlayerBar());
+    $playPauseButton.click(togglePlayFromPlayerBar);
     setupSeekBars();
 
         });
