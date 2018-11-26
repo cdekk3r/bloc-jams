@@ -12,4 +12,4 @@ Bloc-Jams is a digital music playing application. It was first coded in JavaScri
 - AngularJs (https://github.com/cdekk3r/bloc-jams-angular)
 - Buzz audio library (buzz.jaysalvat.com)
 
-View here - https://bookkeeper-barbara-13657.netlify.com/
+Demo here - https://bookkeeper-barbara-13657.netlify.com/
