@@ -11,3 +11,5 @@ Bloc-Jams is a digital music playing application. It was first coded in JavaScri
 - jQuery
 - AngularJs (https://github.com/cdekk3r/bloc-jams-angular)
 - Buzz audio library (buzz.jaysalvat.com)
+
+View here - https://dazzling-colden-26fa4a.netlify.com/
